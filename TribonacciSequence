@@ -1,0 +1,27 @@
+def tribonacci(signature, n):
+    first = 0
+    second = 1
+    third = 2
+    if n == 0:
+        return []
+    elif n==1:
+        return [signature[first]]
+    elif n == 2:
+        return [signature[first], signature[second]]
+    else:        
+        while len(signature) != n:
+            nextnum = signature[first] + signature[second] + signature[third]
+            signature.append(nextnum)
+            first += 1
+            second += 1
+            third += 1
+        return signature 
+listnum = int(input('how many do you wanna start with'))
+signature = []
+length = len(signature)
+n = int(input('how many numbers in sequence'))
+while length != listnum:
+    listinput = int(input('what to add'))
+    signature.append(listinput)
+    length += 1
+print(tribonacci(signature,n))
