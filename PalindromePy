@@ -1,0 +1,22 @@
+#CODE FOR PALINDROME
+def palindrome(n):
+    wordlist = list(n)
+    n = len(wordlist) * -1
+    g = 0
+    h = 0
+    reversedlist = []
+    while g != n-1:
+        lastword = wordlist[g]
+        reversedlist.append(lastword)
+        g -= 1
+    reversedlist.pop(0)
+    for thing in wordlist:
+        reversedlist[h]
+        if thing == reversedlist[h]:
+            h += 1
+        else:
+            return 'not a palindrome'
+    return 'it is a palindrome'
+n = input()
+print(palindrome(n))
+
